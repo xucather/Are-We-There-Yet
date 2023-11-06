@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textLabelProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="@string/provider" />
+
+    <TextView
+        android:id="@+id/textProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/textLabelProvider"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textLabelLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLabelProvider"
+        android:text="@string/latitude" />
+
+    <TextView
+        android:id="@+id/textLatitude"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textProvider"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/textLabelLatitude"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textLabelLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLatitude"
+        android:layout_marginTop="2dp"
+        android:text="@string/longitude" />
+
+    <TextView
+        android:id="@+id/textLongititude"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLatitude"
+        android:layout_alignTop="@id/textLabelLongitude"
+        android:layout_alignBottom="@id/textLabelLongitude"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/textLabelLongitude"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLongititude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/dummy"
+        android:textSize="12sp"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/dummy" />
+
+    <TextView
+        android:id="@+id/textNewLocLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDistance"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/newloc"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textNewLocLabel"
+        android:layout_alignStart="@id/textLabelProvider"
+        android:layout_alignEnd="@id/bicyclingButton"
+        android:layout_centerHorizontal="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="#DF1919"
+        android:importantForAutofill="no"
+        android:inputType="textPostalAddress"
+        android:minWidth="220dp"
+        android:minHeight="48dp"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck"></EditText>
+
+    <Button
+        android:id="@+id/buttonNewLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editLocation"
+        android:layout_alignEnd="@id/editLocation"
+        android:backgroundTint="#DAD9D9"
+        android:onClick="onNew"
+        android:text="@string/newButton"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/drivingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonNewLoc"
+        android:backgroundTint="#D8D7D7"
+        android:onClick="onDrive"
+        android:text="@string/driving"
+        android:textColor="#050505" />
+
+    <Button
+        android:id="@+id/walkingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonNewLoc"
+        android:layout_toEndOf="@id/drivingButton"
+        android:backgroundTint="#CDCDCD"
+        android:onClick="onWalk"
+        android:text="@string/walking"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/bicyclingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonNewLoc"
+        android:layout_toEndOf="@id/walkingButton"
+        android:backgroundTint="#D8D7D7"
+        android:onClick="onBike"
+        android:text="@string/bicycling"
+        android:textColor="#050505" />
+
+</RelativeLayout>
